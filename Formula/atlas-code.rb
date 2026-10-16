@@ -29,8 +29,9 @@ class AtlasCode < Formula
     end
   end
 
-  # `brew install --HEAD raoulg/tap/atlas` builds the nightly line, `next`, from source.
-  head "https://github.com/raoulg/atlas.git", branch: "next" do
+  # `brew install --HEAD raoulg/tap/atlas-code` builds the nightly line, `next`, from source.
+  head do
+    url "https://github.com/raoulg/atlas.git", branch: "next"
     depends_on "rust" => :build
   end
 
