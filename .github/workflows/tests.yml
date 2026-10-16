@@ -17,6 +17,6 @@ jobs:
         run: |
           mkdir -p "$(brew --repository)/Library/Taps/raoulg"
           ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/raoulg/homebrew-tap"
-      - run: brew audit --strict raoulg/tap/atlas
-      - run: brew install raoulg/tap/atlas
-      - run: brew test raoulg/tap/atlas
+      - run: brew audit --strict raoulg/tap/atlas-code
+      - run: brew install raoulg/tap/atlas-code
+      - run: brew test raoulg/tap/atlas-code

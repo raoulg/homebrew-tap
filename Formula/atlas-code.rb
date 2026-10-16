@@ -1,8 +1,11 @@
-class Atlas < Formula
+class AtlasCode < Formula
   desc "Draws what a program is, beneath the language it is written in"
   homepage "https://raoulg.github.io/atlas/"
   version "0.66.1"
   license "CC-BY-NC-SA-4.0"
+
+  # Ariga's Atlas, a database schema tool in homebrew-core, installs an executable of the same name.
+  conflicts_with "atlas", because: "both install an `atlas` executable"
 
   on_macos do
     on_arm do
