@@ -1,0 +1,22 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  formula:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: actions/checkout@v4
+      - name: tap this repository
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/raoulg"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/raoulg/homebrew-tap"
+      - run: brew audit --strict raoulg/tap/atlas
+      - run: brew install raoulg/tap/atlas
+      - run: brew test raoulg/tap/atlas
