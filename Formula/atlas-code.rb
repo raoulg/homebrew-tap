@@ -1,7 +1,7 @@
 class AtlasCode < Formula
   desc "Draws what a program is, beneath the language it is written in"
   homepage "https://raoulg.github.io/atlas/"
-  version "0.66.1"
+  version "0.66.2"
   license "CC-BY-NC-SA-4.0"
 
   # Ariga's Atlas, a database schema tool in homebrew-core, installs an executable of the same name.
@@ -9,23 +9,23 @@ class AtlasCode < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/v0.66.1/atlas-aarch64-apple-darwin.tar.gz"
-      sha256 "e281800ae133b84e5c5e66f72656bdbcc0f356ccae5ed26528f2057c22e23192"
+      url "https://github.com/raoulg/atlas/releases/download/v0.66.2/atlas-aarch64-apple-darwin.tar.gz"
+      sha256 "82c4011f6431d57e290b891d3ebd2cd540e0709b7b640787020ab171d0aacca5"
     end
     on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/v0.66.1/atlas-x86_64-apple-darwin.tar.gz"
-      sha256 "04b55ca97fb62c9d60ce761e62fa9657d608022a3cba29a66f43032933ad09d5"
+      url "https://github.com/raoulg/atlas/releases/download/v0.66.2/atlas-x86_64-apple-darwin.tar.gz"
+      sha256 "4500e5bac809cf933e258bf2bbd7eff2763a45e645637fadc47d96d798692fea"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/v0.66.1/atlas-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ad161c8a16a1675f98f379de25b63fd3f8d11e706e2abbe872080fff7d2de38a"
+      url "https://github.com/raoulg/atlas/releases/download/v0.66.2/atlas-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "665c4bed5cac0339bd5aef6b8f30d1a3ddacac2c2e19b2e623e9fff1c8004907"
     end
     on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/v0.66.1/atlas-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9cbd12ce34f6206db479633c69cbfbe01cd53cd37fae2896ed6b53f3e883f362"
+      url "https://github.com/raoulg/atlas/releases/download/v0.66.2/atlas-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "5e5119068ff678f41825b9640dd60f15cbc719a5fb59b6fea7a49290d563043f"
     end
   end
 
