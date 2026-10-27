@@ -1,41 +1,39 @@
 class AtlasCodeNightly < Formula
-  desc "Draws what a program is, beneath the language it is written in: the nightly build"
+  desc "Draws what a program is, beneath its language: the nightly build"
   homepage "https://raoulg.github.io/atlas/"
-  version "0.68.0-nightly.202610261819"
+  version "0.68.0-nightly.202610270827"
   license "CC-BY-NC-SA-4.0"
 
   # A nightly of `next`, built when `next` has moved and its tests are green: one pre-release per build.
-  # Ariga's Atlas, a database schema tool in homebrew-core, installs an executable of the same name.
-  conflicts_with "atlas", because: "both install an `atlas` executable"
-  conflicts_with "atlas-code", because: "both install an `atlas` executable"
+  # It installs `atlas-nightly`, beside the release's `atlas`.
 
   on_macos do
     on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/nightly-202610261819/atlas-aarch64-apple-darwin.tar.gz"
-      sha256 "cecf6bf1b4015faa623d9191b64efd90c9071f82d6f9848157efe5737c5a1b41"
+      url "https://github.com/raoulg/atlas/releases/download/nightly-202610270827/atlas-aarch64-apple-darwin.tar.gz"
+      sha256 "aa83c8ed4c19283bd0c5aac8b4728ae6bf64d4b3dcacc8bd47db30685cdc5b09"
     end
     on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/nightly-202610261819/atlas-x86_64-apple-darwin.tar.gz"
-      sha256 "736700b8862a78942f4a5101122e8a72d1a3ceb309f45f62a71d91364cfeae6a"
+      url "https://github.com/raoulg/atlas/releases/download/nightly-202610270827/atlas-x86_64-apple-darwin.tar.gz"
+      sha256 "a58c30fb5a970b629f437ce5b045dd86dc8ea2406316f5fce5975f64e59d5e87"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/nightly-202610261819/atlas-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5b2419ecf953155d3118babed36911a3b88ce206a98fc3a3f0e0e4863651964d"
+      url "https://github.com/raoulg/atlas/releases/download/nightly-202610270827/atlas-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5c96b8680713bdeda446f1be1d717f232d4c51494f5099d9c17287e906e58b2a"
     end
     on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/nightly-202610261819/atlas-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8e33760502ff52df5575fb1e265ad426233a2ab9176cde94f5577982e1b4031d"
+      url "https://github.com/raoulg/atlas/releases/download/nightly-202610270827/atlas-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "77542c8a458ed8842975face9740e599a664589c9d6bb0443056c102b67fa87f"
     end
   end
 
   def install
-    bin.install "atlas"
+    bin.install "atlas" => "atlas-nightly"
   end
 
   test do
-    assert_match version.to_s.split("-").first, shell_output("#{bin}/atlas --version")
+    assert_match version.to_s.split("-").first, shell_output("#{bin}/atlas-nightly --version")
   end
 end
