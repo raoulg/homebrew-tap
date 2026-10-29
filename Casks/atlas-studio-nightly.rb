@@ -1,14 +1,14 @@
 cask "atlas-studio-nightly" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.69.2-nightly.202610290901"
-  sha256 arm:   "9c065ba3240ddb761844ac147f9b22cd62dfd6ab06ec6f597071fd78ed2aa15a",
-         intel: "669ecb5164c9793025073155832b219e290f9b38207bddcc068a423db4cf952c"
+  version "0.70.0-nightly.202610291807"
+  sha256 arm:   "bccad491ba76028dc59672dc12f1ab26559a1b2abf94ef8c30ea4bdbc4be7302",
+         intel: "e89a6cb34b7ee6677f7a3ca1d3cf7b5e6998d71bcc6bc93e383b4a75bbfb606d"
 
   url "https://github.com/raoulg/atlas/releases/download/nightly-#{version.split(".").last}/atlas-studio-#{arch}-apple-darwin.dmg"
   name "Atlas Studio Nightly"
   desc "Draws what a program is, beneath its language: the nightly build"
-  homepage "https://raoulg.github.io/atlas/"
+  homepage "https://atlas.pttrn.io/"
 
   auto_updates true
   depends_on :macos
