@@ -1,33 +1,7 @@
 class AtlasCode < Formula
-  desc "Draws what a program is, beneath the language it is written in"
-  homepage "https://raoulg.github.io/atlas/"
-  version "0.69.4"
+  desc "Atlas — your code's topology"
+  homepage "https://atlas.pttrn.io/"
   license "AGPL-3.0-only"
-
-  # Ariga's Atlas, a database schema tool in homebrew-core, installs an executable of the same name.
-  conflicts_with "atlas", because: "both install an `atlas` executable"
-
-  on_macos do
-    on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/v0.69.4/atlas-aarch64-apple-darwin.tar.gz"
-      sha256 "bfb75daf5ee96436904968480f19e22bf9661fb56e4569a3ab7c33f50483b140"
-    end
-    on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/v0.69.4/atlas-x86_64-apple-darwin.tar.gz"
-      sha256 "3a5821218a19269b93330601428fe2a0b147e769261fb7a3fe8d6856fe8d2b1b"
-    end
-  end
-
-  on_linux do
-    on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/v0.69.4/atlas-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "247813a7c28aadc01c9f7f880ba354d15e999d39ea4f98105e99116dc5836b88"
-    end
-    on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/v0.69.4/atlas-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5af5ff8c0761776e6093efe5e472384f74bcb34ef6c41569193e14d4aaa473cf"
-    end
-  end
 
   # `brew install --HEAD raoulg/tap/atlas-code` builds the nightly line, `next`, from source.
   head do
@@ -35,16 +9,38 @@ class AtlasCode < Formula
     depends_on "rust" => :build
   end
 
+  on_macos do
+    on_arm do
+      url "https://github.com/raoulg/atlas/releases/download/v0.70.0/atlas-code-aarch64-apple-darwin.tar.gz"
+      sha256 "0ddb84cd8c84537f9773528e58942b6e3d42d0ab8a621c423e0dd171455cf7ec"
+    end
+    on_intel do
+      url "https://github.com/raoulg/atlas/releases/download/v0.70.0/atlas-code-x86_64-apple-darwin.tar.gz"
+      sha256 "50167a29a86d01e98dec89fc7894ef75c3e4a44f988f6ad22ad222b06b359e24"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/raoulg/atlas/releases/download/v0.70.0/atlas-code-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b69baeee647718e98b8ec2b7ff24fb2fe5e29b13e0b7b3695586960972a3ede1"
+    end
+    on_intel do
+      url "https://github.com/raoulg/atlas/releases/download/v0.70.0/atlas-code-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "44f9e2c32f968b17ea328c948060f7b37047b5c79ebda896c979a9fc6dd03982"
+    end
+  end
+
   def install
     if build.head?
       ENV["ATLAS_CHANNEL"] = "nightly"
       system "cargo", "install", *std_cargo_args(path: "cli")
     else
-      bin.install "atlas"
+      bin.install "atlas-code"
     end
   end
 
   test do
-    assert_match version.to_s.split("-").first, shell_output("#{bin}/atlas --version")
+    assert_match version.to_s.split("-").first, shell_output("#{bin}/atlas-code --version")
   end
 end

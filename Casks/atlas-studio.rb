@@ -1,14 +1,14 @@
 cask "atlas-studio" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.69.4"
-  sha256 arm:   "09c836a800d0650cb575600571530e4c87251f24d860708866d538059ec41ce9",
-         intel: "3e2ea26bbecafb4825a62dca422499464237dbbb26699dee788fd6fb3f23eeb1"
+  version "0.70.0"
+  sha256 arm:   "d5ad49fc342ebed3d15a4a8d56c8cc0d9774161d2aad51d7a8e9ea42b61edfc3",
+         intel: "feae0de05a2e46a2fba0139633c8130ce6bb67b30a930c338c2da1df5c2b6e97"
 
   url "https://github.com/raoulg/atlas/releases/download/v#{version}/atlas-studio-#{arch}-apple-darwin.dmg"
   name "Atlas Studio"
   desc "Draws what a program is, beneath the language it is written in"
-  homepage "https://raoulg.github.io/atlas/"
+  homepage "https://atlas.pttrn.io/"
 
   livecheck do
     url :url
