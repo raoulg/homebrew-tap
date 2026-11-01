@@ -1,7 +1,7 @@
 class AtlasCodeNightly < Formula
   desc "Atlas — your code's topology: the nightly build"
   homepage "https://atlas.pttrn.io/"
-  version "0.70.0-nightly.202610301407"
+  version "0.71.0-nightly.202611011039"
   license "AGPL-3.0-only"
 
   # A nightly of `next`, built when `next` has moved and its tests are green: one pre-release per build.
@@ -9,23 +9,23 @@ class AtlasCodeNightly < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/nightly-202610301407/atlas-code-aarch64-apple-darwin.tar.gz"
-      sha256 "60fd29a27113043d351a7b00a3184703e58ed075c2a7d8ad8a9b893cad732c97"
+      url "https://github.com/raoulg/atlas/releases/download/nightly-202611011039/atlas-code-aarch64-apple-darwin.tar.gz"
+      sha256 "43368eff1f135a4f65907d9b4aa585ab265fc7e41509d33da7d838e4788577da"
     end
     on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/nightly-202610301407/atlas-code-x86_64-apple-darwin.tar.gz"
-      sha256 "973dc07b0566fed7e7320deb36b6feeadac3c86435aa738ccce50670d1120c92"
+      url "https://github.com/raoulg/atlas/releases/download/nightly-202611011039/atlas-code-x86_64-apple-darwin.tar.gz"
+      sha256 "d750563def2836dab4b38b4a36aa877ad4785c6018c35b5959b2ae0e73316474"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/nightly-202610301407/atlas-code-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "f8a6595e007fb8ec3264ddbdb3e1d549197982f2a503b139853b288689db0b7c"
+      url "https://github.com/raoulg/atlas/releases/download/nightly-202611011039/atlas-code-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "bec144d3bd9f31481448273c1fe72c573ee3cabd3fc57942c307b68dc9f39f8a"
     end
     on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/nightly-202610301407/atlas-code-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7b975ff25bf461f9da1b698e1c5d2773f5fddc268defbd1a2cf7522f3834f285"
+      url "https://github.com/raoulg/atlas/releases/download/nightly-202611011039/atlas-code-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "acffb1641870c20bf5cd8cac877947445a496e17d5f74ec8b6a2a884021333db"
     end
   end
 
