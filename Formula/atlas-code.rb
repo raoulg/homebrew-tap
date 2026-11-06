@@ -11,23 +11,23 @@ class AtlasCode < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/v0.71.0/atlas-code-aarch64-apple-darwin.tar.gz"
-      sha256 "b70f3beff3cc1f26d5c62080790db44858c44e2b71d112e303e137d3dc541c56"
+      url "https://github.com/raoulg/atlas/releases/download/v0.72.0/atlas-code-aarch64-apple-darwin.tar.gz"
+      sha256 "da2c79b24764a8a2da8d5ab2647f21e51ec1de683211200e82c20cc3a5f15fdc"
     end
     on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/v0.71.0/atlas-code-x86_64-apple-darwin.tar.gz"
-      sha256 "71b3c6ee06c908189f41151b2787a378821b979b9bc10c0fa9fd27a84fc91388"
+      url "https://github.com/raoulg/atlas/releases/download/v0.72.0/atlas-code-x86_64-apple-darwin.tar.gz"
+      sha256 "3b69b7b7b4fb06f78f93a8d57ba92a37ac787816fa140af49acc99c0750f8563"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/raoulg/atlas/releases/download/v0.71.0/atlas-code-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "f13705178ee299e77dad4c41f56c4a0be524a971a889a0780f445fde07d22a0d"
+      url "https://github.com/raoulg/atlas/releases/download/v0.72.0/atlas-code-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "eb5b87974d2f9d05d58fe2740f849d5973678a7364741a703c7274796dcde0f2"
     end
     on_intel do
-      url "https://github.com/raoulg/atlas/releases/download/v0.71.0/atlas-code-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1f1bcc61bc6f9fa61c3d82d3e3b78624e3ad478f44cab0b1aa4dc5269359193d"
+      url "https://github.com/raoulg/atlas/releases/download/v0.72.0/atlas-code-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "71adf3128fa79888209117e9743f06878cb880fa36a7ce9e5d7d0d38925e2b98"
     end
   end
 
