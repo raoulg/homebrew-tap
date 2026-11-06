@@ -1,9 +1,9 @@
 cask "atlas-studio" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.72.0"
-  sha256 arm:   "406d2d30e264f1a7c3b6aea489c22d6c1ef1e942b5c160395d8ac8e1e5fc212d",
-         intel: "45353a1bc26b14512213075888c75477c1395975a4d312b781a179ac2a0c0aab"
+  version "0.72.1"
+  sha256 arm:   "77004612319a4de2f9272f0d4f4f57c02ec35ce53f836b91c3644baa044e0248",
+         intel: "63aa52cc8dc0c15d4d8ce257718947b8cec4b1663c4a0868dcbb6f22df1e71b4"
 
   url "https://github.com/raoulg/atlas/releases/download/v#{version}/atlas-studio-#{arch}-apple-darwin.dmg"
   name "Atlas Studio"
