@@ -1,9 +1,9 @@
 cask "atlas-studio-nightly" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.73.0-nightly.202611061426"
-  sha256 arm:   "30564dc23a0bd90ab60ba26937d779159dfc54174c111739d2ac6bdaff580a95",
-         intel: "c3e215218b21e1311710f10cf56068c585cc0a5b9ae2410f0e004dd50a560a8a"
+  version "0.73.0-nightly.202611071230"
+  sha256 arm:   "c641e0d613b3715858d6714ee009cb63f809d753ff38299a55a049893481180a",
+         intel: "67a18cb1e4a469c2d6a567f8db3b3f37539a9d13ca94e7ddf34310649d0286ec"
 
   url "https://github.com/raoulg/atlas/releases/download/nightly-#{version.split(".").last}/atlas-studio-#{arch}-apple-darwin.dmg"
   name "Atlas Studio Nightly"
